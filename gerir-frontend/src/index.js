@@ -7,7 +7,21 @@ import Tarefas from './pages/tarefas';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+
+const rotas = (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Login}/>
+        <Route path="/tarefas" component={Tarefas}/>
+      </Switch>
+
+    </div>
+
+  </Router>
+)
 
 ReactDOM.render(
   <React.StrictMode>
